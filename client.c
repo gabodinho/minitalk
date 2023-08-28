@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test2.c                                            :+:      :+:    :+:   */
+/*   server.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ggiertzu <ggiertzu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 20:36:57 by ggiertzu          #+#    #+#             */
-/*   Updated: 2023/08/27 22:04:26 by ggiertzu         ###   ########.fr       */
+/*   Updated: 2023/08/28 22:05:01 by ggiertzu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <sys/types.h>
 #include <unistd.h>
 #include <stdio.h>
+#include "ft_printf.h"
 
 static void	send_char(pid_t pid, int arg)
 {
@@ -46,4 +47,3 @@ int	main(int argc, char **argv)
 	}
 	return (0);
 }
-
