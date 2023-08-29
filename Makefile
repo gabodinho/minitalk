@@ -6,7 +6,7 @@
 #    By: ggiertzu <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/20 18:33:58 by ggiertzu          #+#    #+#              #
-#    Updated: 2023/08/28 22:19:26 by ggiertzu         ###   ########.fr        #
+#    Updated: 2023/08/29 21:03:34 by ggiertzu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ minitalk.a:
 clean:
 	make clean -C $(LIBFT_DIR)
 fclean: clean
-	$(RM) server client
+	$(RM) server client minitalk.a
 	make fclean -C $(LIBFT_DIR)
 re: fclean all
 

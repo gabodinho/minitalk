@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   client.c                                           :+:      :+:    :+:   */
+/*   server.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ggiertzu <ggiertzu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 20:36:19 by ggiertzu          #+#    #+#             */
-/*   Updated: 2023/08/28 22:11:24 by ggiertzu         ###   ########.fr       */
+/*   Updated: 2023/08/29 21:04:38 by ggiertzu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ int	main(void)
 {
 	int					i;
 	int					res;
-//	struct sigaction	new_handler;
+	struct sigaction	new_handler;
 
 	ft_printf("%d\n", getpid());
-	struct sigaction new_handler = {.sa_handler = signal_handler,};
+	new_handler.sa_handler = signal_handler;
 	sigaction(SIGUSR1, &new_handler, NULL);
 	sigaction(SIGUSR2, &new_handler, NULL);
 	while (1)
